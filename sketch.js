@@ -27,7 +27,7 @@
   bullet.shapeColor=color(0,255,0);
   }
   }
-  if(hasCollided(Lbullet,Lwall)){
+  if(hasCollided(bullet,wall)){
   bullet.velocityX=0;
   var damage=0.5 * weight * speed * speed/(thickness * thickness * thickness);
   if(damage>10){
@@ -40,8 +40,8 @@
   drawSprites();
   }
   function hasCollided(Lbullet,Lwall){
-  bulletRightEdge=lbulet.x+Lbullet.width;
-  wallLeftEdge=lwall.x;
+  bulletRightEdge=bullet.x+Lbullet.width;
+  wallLeftEdge=wall.x;
   if(bulletRightEdge>=wallLeftEdge){
   return true;
   }
